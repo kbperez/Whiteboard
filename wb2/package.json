@@ -1,0 +1,20 @@
+{
+  "name": "02-tools-context",
+  "version": "1.0.0",
+  "description": "day 2 whiteboarding challenge using tests",
+  "main": "solution.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest --verbose"
+  },
+  "keywords": [
+    "jest"
+  ],
+  "author": "Karen Perez",
+  "license": "MIT",
+  "dependencies": {
+    "jest": "^22.1.1"
+  }
+}
