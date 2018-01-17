@@ -1,6 +1,6 @@
 'use strict';
 
-function (arr) {
+let arrayStats = function (arr) {
 
 let reducer = arr.reduce((accumulator, currentValue) => accumulator + currentValue);
 let avg = reducer / arr.length;
