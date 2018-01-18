@@ -1,0 +1,17 @@
+{
+  "name": "wb3",
+  "version": "1.0.0",
+  "description": "challenge nested objects",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest --verbose"
+  },
+  "author": "Karen Perez",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^22.1.2"
+  }
+}
