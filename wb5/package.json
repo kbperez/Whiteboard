@@ -1,0 +1,20 @@
+{
+  "name": "wb4",
+  "version": "1.0.0",
+  "description": "whiteboard day 4 challenge to find intersection of two arrays",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^4.15.0",
+    "jest": "^22.1.4"
+  },
+  "scripts": {
+    "test": "jest --verbose",
+    "lint": "eslint"
+  },
+  "author": "Karen Perez",
+  "license": "MIT"
+}
