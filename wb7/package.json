@@ -1,0 +1,19 @@
+{
+  "name": "wb7",
+  "version": "0.0.0",
+  "description": "whiteboard challenge day 7",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "eslint": "^4.16.0",
+    "jest": "^22.1.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest --verbose"
+  },
+  "author": "Karen Perez",
+  "license": "MIT"
+}
