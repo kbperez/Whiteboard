@@ -3,6 +3,15 @@
 const solution = require('../lib/solution');
 require('jest');
 
+let testArray=[];
+
+for (let i = 1; i < 100; i++) {
+  testArray[i] = i;
+}
+
+testArray.splice(38, 1);
+
+
 describe('Solution Module', function() {
 
   describe('Input validation', () => {
@@ -14,10 +23,10 @@ describe('Solution Module', function() {
   });
 
   describe('Functionality validation', () => {
-    let arr = [1, 2, 4, 5];
+
     it('should verify the output is correct', () => {
-      expect(solution(arr)).toBe(3);
-      expect(solution(arr)).toBeDefined();
+      expect(solution(testArray)).toEqual(38);
+      expect(solution(testArray)).toBeDefined();
     });
   });
 });

@@ -1,7 +1,7 @@
 'use strict';
 const solution = module.exports = function (arr) {
 
-  if(arr.length !== 4 || !Array.isArray(arr)) return 'Invalid input';
+  if(arr.length !== 99 || !Array.isArray(arr)) return 'Invalid input';
 
   let newArr = [0];
 
