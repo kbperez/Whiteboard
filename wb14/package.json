@@ -1,13 +1,13 @@
 {
-  "name": "10-stacks-queues",
+  "name": "wb14",
   "version": "1.0.0",
-  "description": "stacks and queues",
+  "description": "Function dedupe take head of LL as argument, removes consecutice duplicats using a stack, and returns a new LL without the consecutive duplicates",
   "main": "index.js",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
-    "test": "jest --verbose -i"
+    "test": "jest --verbose"
   },
   "author": "Karen Perez",
   "license": "MIT",
