@@ -1,8 +1,6 @@
-'use strict'
+'use strict';
 
 const Nd = require('./nd');
-// import Nd from './nd'
-
 
 class SLL {
   constructor() {
@@ -30,6 +28,26 @@ class SLL {
     return this;
   }
 
+  removeNode(index) {
+    if(!index || typeof index !== 'number') return null;
+    if(index === 1) {
+      this.head = this.head.next;
+      return this;
+    }
+    let current = this.head, prev;
+    for(var itr = 1; itr <= index; itr++) {
+      if (itr === index) {
+        if (current.next) {
+          prev.next = current.next;
+        } else {
+          prev.next = null;
+        }
+        return this;
+      }
+      prev = current;
+      current = current.next;
+    }
+  }
 }
 
-module.exports = SLL
+module.exports = SLL;

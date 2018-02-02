@@ -2,8 +2,8 @@
 'use strict';
 
 class Nd {
-  constructor(value) {
-    this.value = value;
+  constructor(val) {
+    this.val = val;
     this.next = null;
   }
 }
