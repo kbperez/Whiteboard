@@ -1,0 +1,18 @@
+{
+  "name": "wb15",
+  "version": "1.0.0",
+  "description": "using k-ary tree for data structure friday to return an array of nodes without children",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest --verbose"
+  },
+  "author": "Karen Perez",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^4.16.0",
+    "jest": "^22.1.4"
+  }
+}
