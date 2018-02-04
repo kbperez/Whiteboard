@@ -25,7 +25,7 @@ module.exports = class Ktree {
 
       // console.log('current', current);
       callback(current); //perform method
-        //Map over vals looking for children and put in queue if found
+      //Map over vals looking for children and put in queue if found
       current.val.children.map(c => queue.enqueue(c));
     }
   }
@@ -35,28 +35,30 @@ module.exports = class Ktree {
     //create node with value
     let tn = new TreeNode(val);
 
-      //if no tree, set node as root
+    //if no tree, set node as root
     if(!this.root) {
       this.root = tn;
       return this;
     }
-      //call traversal method
+    //call traversal method
     this.breadthFirst(node => {
-      //check if node is at the parent level and push the new value into an array
-      // console.log('node', node);
-      // console.log('node.val', node.val);
-      // console.log('node.val.val', node.val.val);
       if (parent === node.val.val) {
         node.val.children.push(tn);
         return;
       }
     });
-    console.log(this);
     return this;
   }
 
   //Removals
-  // removeByVal(val) {
-  //
-  // }
+  removeByVal(val) {
+    if(!this.root) return; //return if nothing to remove from - no root
+
+    this.breadthFirst(node => { //traverse tree
+      for (let i = 0; i < node.val.children; i++) { //iterate over array looking for val
+        //if val is matched remove the node
+        if (node.val.children[i].val === val) return node.val.children.splice(i, 1);
+      }
+    });
+  }
 };
