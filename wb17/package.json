@@ -1,0 +1,18 @@
+{
+  "name": "wb17",
+  "version": "1.0.0",
+  "description": "a function that accepts a k-ary tree with numeric values in the nodes and returns the total of the values",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest --verbose"
+  },
+  "author": "Karen Perez",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^4.17.0",
+    "jest": "^22.1.4"
+  }
+}
