@@ -1,0 +1,18 @@
+{
+  "name": "wb19",
+  "version": "1.0.0",
+  "description": "function to flattened a k-ary tree into a sorted linked list",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest --verbose"
+  },
+  "author": "Karen Perez",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^4.17.0",
+    "jest": "^22.2.1"
+  }
+}
