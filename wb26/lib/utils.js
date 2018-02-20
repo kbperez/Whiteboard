@@ -26,7 +26,7 @@ utils.filter = function(arr, callback) {
   let result = [];
   //check each array element against callback condition
   for(let i in arr) {
-    if(arr[i] === callback()) result.push(arr[i]);
+    if(callback(arr[i])) result.push(arr[i]);
   }
   //return new array with new number of elements - could be same
   return result;
