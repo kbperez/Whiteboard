@@ -1,0 +1,19 @@
+{
+  "name": "wb26",
+  "version": "1.0.0",
+  "description": "write a utils module with map, filter and reduce methods written from scratch",
+  "main": "solution.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest --verbose",
+    "lint": "eslint . "
+  },
+  "author": "Karen Perez",
+  "license": "MIT",
+  "dependencies": {
+    "eslint": "^4.18.0",
+    "jest": "^22.3.0"
+  }
+}
