@@ -1,9 +1,13 @@
-##Whiteboard Challenge Day 26 - Recursive function
+## Whiteboard Challenge Day 26 - Recursive function
 
-Create a utils.js module which exports the methods: map(), filter(), and reduce(), implemented from scratch.
+Create a function to rotate a 2-D array of numbers 90 degrees.
 
-utils.map(arr, callback) accepts an array and a callback.  It returns a new array with the same length as the original, but with the elements modified by callback.
 
-utils.filter(arr, callback) accepts an array and a callback.  It returns a new array with only the elements that meet the conditions of the callback.
+### Tests
+Test for input - returns null if no input
+Test for valid input - returns message is not an array
+Test for valid output - is it an array
+Test for expected results
 
-utils.reduce(arr, callback, initial) accepts an array, a callback and an initial value.  It returns a single value, based on the initial values and the callback.
+## Big O Notation
+Two loops means O(n^2)
