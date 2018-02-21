@@ -1,6 +1,6 @@
 'use strict';
 
-const solution = require('../solution');
+const solution = require('../lib/solution');
 require('jest');
 
 let matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
@@ -23,7 +23,7 @@ describe('valid output', () => {
 
 describe('invalid input', () => {
   it('should return null if missing input', () => {
-    expect(solution().toBeNull());
+    expect(solution()).toBeNull();
   });
   it('should return a message if input is not an array', () => {
     expect(solution('string')).toBe('Input must be an array');
