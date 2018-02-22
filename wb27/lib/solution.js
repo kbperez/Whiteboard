@@ -10,7 +10,9 @@ module.exports =  function (matrix) {
   let columns = matrix[0].length;
 
   for(let i=0; i<columns; i++) {
-    temp.push([]);
+    for(let j=0; j<rows; j++) {
+      temp.push([]);
+    }
   }
 
   //push into new array after performing callback
@@ -21,6 +23,7 @@ module.exports =  function (matrix) {
     }
   }
   matrix = temp;
+
   //return original array in rotated form
   return matrix;
 };
