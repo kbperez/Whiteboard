@@ -16,6 +16,7 @@ module.exports =  function (array) {
 
     hashKey = array[i].split('').sort().join('');
 
+
     result[hashKey] ? result[hashKey].push(array[i]) : result[hashKey] = [array[i]];
 
     hashKey = '';
@@ -29,4 +30,5 @@ module.exports =  function (array) {
   }
 
   return answer.reduce((a, b) => a.concat(b));
+
 };
