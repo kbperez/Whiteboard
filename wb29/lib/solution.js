@@ -18,8 +18,6 @@ module.exports =  function (array) {
 
     result[hashKey] ? result[hashKey].push(array[i]) : result[hashKey] = [array[i]];
 
-    console.log(result);
-
     hashKey = '';
 
   }

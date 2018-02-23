@@ -3,29 +3,31 @@
 const solution = require('../lib/solution');
 require('jest');
 
-let matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+let more = ['nana', 'anna', 'bear', 'karen', 'karne', 'ranek','naan', 'bare', 'ankre', 'reba'];
 
-let rematrix = [[7, 4, 1], [8, 5, 2], 9, 6, 3];
+let morfe = ['nana', 'anna', 'naan', 'bear', 'bare', 'reba', 'karen', 'karne', 'ranek', 'ankre' ];
 
 
 describe('valid output type', () => {
   it('should return a new array', () => {
-    expect(Array.isArray(solution(matrix))).toBeTrue();
+    expect(Array.isArray(solution(more))).toBeTruthy();
   });
-
 });
 
 describe('valid output', () => {
   it('should return the correct answer', () => {
-    expect(solution(matrix).toEqual(rematrix));
+    expect(solution(more)).toEqual(morfe);
   });
 });
 
 describe('invalid input', () => {
   it('should return null if missing input', () => {
-    expect(solution()).toBeNull();
+    expect(solution()).toBeNull;
   });
   it('should return a message if input is not an array', () => {
-    expect(solution('string')).toBe('Input must be an array');
+    expect(solution('string')).toEqual('Input must be an array');
+  });
+  it('should return a message if array elements are not strings', () => {
+    expect(solution([1])).toBe('Array elements must be strings');
   });
 });
