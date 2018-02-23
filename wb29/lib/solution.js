@@ -16,17 +16,19 @@ module.exports =  function (array) {
 
     hashKey = array[i].split('').sort().join('');
 
-    result[hashKey] ? result[hashKey].concat(array[i]) : result[hashKey] = array[i]
 
-     console.log(result);
+    result[hashKey] ? result[hashKey].push(array[i]) : result[hashKey] = [array[i]];
 
     hashKey = '';
 
   }
 
-  let keys = Object.keys(result);
-  console.log('key', keys);
-  console.log('result', result);
-  // for (keys in result) answer.push(results)
+  for(let property in result) {
+    if(result[property]) {
+      answer.push(result[property]);
+    }
+  }
+
+  return answer.reduce((a, b) => a.concat(b));
 
 };
