@@ -1,8 +1,15 @@
 {
+<<<<<<< HEAD
   "name": "wb31",
   "version": "1.0.0",
   "description": "function to find intersection of two arrays and return results in array",
   "main": "index.js",
+=======
+  "name": "rotate_arrays",
+  "version": "1.0.0",
+  "description": "function to rotate an array of arrays 90 degrees",
+  "main": "solution.js",
+>>>>>>> 3129db5236088520420a93745b13c898bf525f2b
   "directories": {
     "lib": "lib"
   },
@@ -12,7 +19,12 @@
   "author": "Karen Perez",
   "license": "MIT",
   "devDependencies": {
+<<<<<<< HEAD
     "eslint": "^4.18.1",
     "jest": "^22.4.2"
+=======
+    "eslint": "^4.18.0",
+    "jest": "^22.4.0"
+>>>>>>> 3129db5236088520420a93745b13c898bf525f2b
   }
 }

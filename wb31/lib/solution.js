@@ -8,6 +8,7 @@ module.exports =  function (arr1, arr2) {
   //create empty object to hold manipulated elements
   let result = {};
   let answer=[];
+<<<<<<< HEAD
   //set keys on object that correspond to first array elements
   for(let i=0; i<arr1.length; i++) {
     result[arr1[i]] = true;
@@ -18,5 +19,20 @@ module.exports =  function (arr1, arr2) {
     if (result[arr2[j]])answer.push(arr2[j]);
   }
 //use Set functionality to filter out duplicate
+=======
+
+  for(let i=0; i<arr1.length; i++) {
+    result[arr1[i]] = true;
+    console.log(result);
+  }
+
+  for (var j=0; j < arr2.length; j++) {
+    console.log(arr2[j]);
+    if (result[arr2[j]])answer.push(arr2[j]);
+  }
+  console.log(answer);
+
+
+>>>>>>> 3129db5236088520420a93745b13c898bf525f2b
   return Array.from(new Set(answer));
 };
