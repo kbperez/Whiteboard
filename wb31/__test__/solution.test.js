@@ -3,21 +3,18 @@
 const solution = require('../lib/solution');
 require('jest');
 
-let more = ['nana', 'anna', 'bear', 'karen', 'karne', 'ranek','naan', 'bare', 'ankre', 'reba'];
-
-let morfe = ['nana', 'anna', 'naan', 'bear', 'bare', 'reba', 'karen', 'karne', 'ranek', 'ankre' ];
-
-
+let one=[ 3.14, 6, 'dog', 'cat'];
+let two=['cat', 7, 3.14, 'cat'];
 
 describe('valid output type', () => {
   it('should return a new array', () => {
-    expect(Array.isArray(solution(more))).toBeTruthy();
+    expect(Array.isArray(solution(one, two))).toBeTruthy();
   });
 });
 
 describe('valid output', () => {
   it('should return the correct answer', () => {
-    expect(solution(more)).toEqual(morfe);
+    expect(solution(one, two)).toEqual([ 'cat', 3.14 ]);
   });
 });
 
@@ -27,10 +24,5 @@ describe('invalid input', () => {
   });
   it('should return a message if input is not an array', () => {
     expect(solution('string')).toEqual('Input must be an array');
-  });
-  it('should return a message if array elements are not strings', () => {
-
-    expect(solution([1])).toEqual('Array elements must be strings');
-
   });
 });

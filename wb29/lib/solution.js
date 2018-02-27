@@ -29,6 +29,7 @@ module.exports =  function (array) {
     }
   }
 
-  return answer.reduce((a, b) => a.concat(b));
 
+
+  return answer.reduce((a, b) => a.concat(b));
 };
