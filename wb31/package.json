@@ -1,30 +1,20 @@
 {
-<<<<<<< HEAD
   "name": "wb31",
   "version": "1.0.0",
-  "description": "function to find intersection of two arrays and return results in array",
+  "description": "<<<<<<< HEAD Write a function to compute the intersection of two arrays. ======= Write a function to compute the intersection of two arrays using a hash table >>>>>>> 3129db5236088520420a93745b13c898bf525f2b",
   "main": "index.js",
-=======
-  "name": "rotate_arrays",
-  "version": "1.0.0",
-  "description": "function to rotate an array of arrays 90 degrees",
-  "main": "solution.js",
->>>>>>> 3129db5236088520420a93745b13c898bf525f2b
   "directories": {
     "lib": "lib"
   },
   "scripts": {
     "test": "jest --verbose"
   },
-  "author": "Karen Perez",
-  "license": "MIT",
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-<<<<<<< HEAD
-    "eslint": "^4.18.1",
     "jest": "^22.4.2"
-=======
-    "eslint": "^4.18.0",
-    "jest": "^22.4.0"
->>>>>>> 3129db5236088520420a93745b13c898bf525f2b
+  },
+  "dependencies": {
+    "eslint": "^4.18.1"
   }
 }
