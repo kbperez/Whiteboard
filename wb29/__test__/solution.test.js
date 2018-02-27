@@ -8,6 +8,7 @@ let more = ['nana', 'anna', 'bear', 'karen', 'karne', 'ranek','naan', 'bare', 'a
 let morfe = ['nana', 'anna', 'naan', 'bear', 'bare', 'reba', 'karen', 'karne', 'ranek', 'ankre' ];
 
 
+
 describe('valid output type', () => {
   it('should return a new array', () => {
     expect(Array.isArray(solution(more))).toBeTruthy();
@@ -28,6 +29,8 @@ describe('invalid input', () => {
     expect(solution('string')).toEqual('Input must be an array');
   });
   it('should return a message if array elements are not strings', () => {
-    expect(solution([1])).toBe('Array elements must be strings');
+
+    expect(solution([1])).toEqual('Array elements must be strings');
+
   });
 });
