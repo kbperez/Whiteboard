@@ -1,24 +1,30 @@
 'use strict';
 
-module.exports =  function (arr1, arr2) {
-  //validate input
-  if (!arr1 && !arr2) return null;
-  if (!Array.isArray(arr1) || !Array.isArray(arr2)) return 'Input must be an array';
+const solution = module.exports = {};
 
-  //create empty object to hold manipulated elements
-  let result = {};
-  let answer=[];
+solution.fibi = function(n){
+  //validate input
+  if (n === undefined) return null;
+  if (n < 0) return 'Negative values not allowed';
+  if (!Number.isInteger(n)) return 'Input must be an integer';
+
+  let sequence=[0, 1]; //because first two entries are equal to index
 
   //set keys on object that correspond to first array elements
-  for(let i=0; i<arr1.length; i++) {
-    result[arr1[i]] = true;
+  for(let i=2; i<n+1; i++) {
+    let temp = sequence[(i-1)] + sequence[(i-2)];
+    sequence.push(temp);
+    // console.log(sequence);
   }
+  return sequence[n];
+};
 
-  //check to see if a key exists for second array element and push to new array if it does
-  for (var j=0; j < arr2.length; j++) {
-    if (result[arr2[j]])answer.push(arr2[j]);
-  }
-  //use Set functionality to filter out duplicate
+solution.fibr = function(n){
+  //validate input
+  if (n === undefined) return null;
+  if (n < 0) return 'Negative values not allowed';
+  if (!Number.isInteger(n)) return 'Input must be an integer';
 
-  return Array.from(new Set(answer));
+  if (n <= 1) return n;
+  return solution.fibr(n-1) + solution.fibr(n-2);
 };
