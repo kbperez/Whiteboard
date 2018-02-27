@@ -16,6 +16,10 @@ module.exports =  function (array) {
 
     hashKey = array[i].split('').sort().join('');
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> af9b0e93c02dec63ae20d93eea9bfd08e8f21ba2
     result[hashKey] ? result[hashKey].push(array[i]) : result[hashKey] = [array[i]];
 
     hashKey = '';
@@ -27,6 +31,11 @@ module.exports =  function (array) {
       answer.push(result[property]);
     }
   }
+<<<<<<< HEAD
+=======
+
+  return answer.reduce((a, b) => a.concat(b));
+>>>>>>> af9b0e93c02dec63ae20d93eea9bfd08e8f21ba2
 
   return answer.reduce((a, b) => a.concat(b));
 };
