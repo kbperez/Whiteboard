@@ -1,0 +1,19 @@
+{
+  "name": "wb33",
+  "version": "1.0.0",
+  "description": "Write a function to accept 2 numbers a base and an exponent and return the sum of the digits of the calculated value",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest --verbose"
+  },
+  "author": "Karen Perez",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^4.18.1",
+    "jest": "^22.4.2"
+  },
+  "dependencies": {}
+}
