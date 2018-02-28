@@ -27,5 +27,7 @@ describe('invalid input', () => {
   it('should return a message if input is not a number', () => {
     expect(solution(3, '2')).toEqual('Input must be 2 numbers');
     expect(solution('three', 'two')).toEqual('Input must be 2 numbers');
+    expect(solution(-7, 0.5)).toEqual('Cannot calcuate fractional exponents of negative numbers');
+    expect(solution(0, -0.5)).toEqual('Cannot divide by zero');
   });
 });
