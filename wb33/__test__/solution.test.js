@@ -15,6 +15,7 @@ describe('valid output', () => {
     expect(solution(2,3)).toEqual(8);
     expect(solution(-1,2)).toEqual(1);
     expect(solution(2.5, 8.6)).toEqual(16);
+    expect(solution(0.2, 2)).toEqual('This function does not work for values below zero');
   });
 });
 
