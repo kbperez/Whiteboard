@@ -1,69 +1,54 @@
 'use strict'
 
+const TreeNode = require('../lib/tree-node');
 const BinaryTree = require('../lib/binary-tree')
-const solution = require('../index');
+const solution = require('../lib/solution');
 require('jest');
 
-let one = new BinaryTree.TreeNode(1);
-let two = new BinaryTree.TreeNode(2);
-let three = new BinaryTree.TreeNode(3);
-let four = new BinaryTree.TreeNode(4);
-let five = new BinaryTree.TreeNode(5);
-let six = new BinaryTree.TreeNode(6);
-let seven = new BinaryTree.TreeNode(7);
-let eight = new BinaryTree.TreeNode(8);
-let nine = new BinaryTree.TreeNode(9);
+let one = new TreeNode(1);
+let two = new TreeNode(2);
+let three = new TreeNode(3);
+let four = new TreeNode(4);
+let five = new TreeNode(5);
+let six = new TreeNode(6);
+let seven = new TreeNode(7);
+let eight = new TreeNode(8);
+let nine = new TreeNode(9);
+let ten = new TreeNode(10);
 
-let binaryTree = new BinaryTree.BinaryTree();
+let binaryTree = new BinaryTree();
 binaryTree.root = one;
 one.left = two;
 one.right = three;
-two.left = six;
-three.left = four;
-three.right = five;
-six.right = seven;
-seven.left = eight;
-seven.right = nine;
+two.left = four;
 
-let sameTree = new BinaryTree.BinaryTree();
-sameTree.root = one;
-one.left = two;
-one.right = three;
-two.left = six;
-three.left = four;
-three.right = five;
-six.right = seven;
-seven.left = eight;
-seven.right = nine;
+let sameTree = new BinaryTree();
+sameTree.root = five;
+five.left = six;
+five.right = seven;
+six.left = eight;
 
-let differentTree = new BinaryTree.BinaryTree();
-differentTree.root = two;
-two.right = one;
-one.right = three;
-two.left = six;
-three.left = four;
-three.right = five;
-six.left = seven;
-seven.left = eight;
-seven.right = nine;
 
-let uno = new BinaryTree.TreeNode(1);
-let noTree = new BinaryTree.BinaryTree();
-noTree.root = uno;
+let differentTree = new BinaryTree();
+differentTree.root = ten;
+ten.right = eight;
+
+let noTree = new BinaryTree();
+noTree.root = nine;
 
 describe('Binary-tree structure', function() {
   describe('Valid output', function() {
     it('should return true for the same structure', function() {
-      expect(solution.testStructure(binaryTree, sameTree).toBe(true));
+      expect(solution(binaryTree, sameTree)).toBe(true);
     });
     it('should return false for different structure', function() {
-      expect(solution.testStructure(binaryTree, differentTree).toBe(false));
+      expect(solution(binaryTree, differentTree)).toBe(false);
     });
   })
   describe('Invalid inpjut', function() {
     it('should accept two binary tress', () => {
-      expect(solution.testStructure().toEqual('Invalid input'));
-      expect(solution.testStructure(differentTree, noTree).toEqual('Invalid structure'));
+      expect(solution()).toEqual('Invalid input');
+      expect(solution(differentTree, nine)).toEqual('Invalid structure');
     })
   })
 })
