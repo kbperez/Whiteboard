@@ -45,10 +45,17 @@ describe('Binary-tree structure', function() {
       expect(solution(binaryTree, differentTree)).toBe(false);
     });
   })
-  describe('Invalid inpjut', function() {
-    it('should accept two binary tress', () => {
+  describe('Invalid input', function() {
+    it('should reject incorrect input', () =>{
+      expect(solution()).toEqual('Invalid input');
+      expect(solution(binaryTree)).toEqual('Invalid input');
+
+    })
+
+    it('should accept two binary trees', () => {
       expect(solution()).toEqual('Invalid input');
       expect(solution(differentTree, nine)).toEqual('Invalid structure');
+      expect(solution('tree1', 'tree2')).toEqual('Invalid structure');
     })
   })
 })
